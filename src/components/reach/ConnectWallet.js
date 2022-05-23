@@ -95,7 +95,21 @@ import {loadStdlib} from '@reach-sh/stdlib';
 // import { Context } from "../../Context";
 // import { useRef } from 'react';
 
-const reach = loadStdlib('ALGO');
+
+// Added popup algoconnect feature 
+import { ALGO_MyAlgoConnect as MyAlgoConnect } from '@reach-sh/stdlib'
+
+const reach = loadStdlib(process.env);
+
+reach.setWalletFallback(reach.walletFallback({
+
+providerEnv: 'TestNet', MyAlgoConnect 
+
+}))
+
+
+
+// const reach = loadStdlib('ALGO');
 
 
 const ConnectWallet = () => {
